@@ -78,6 +78,21 @@ def remainder_tens(number)
   number%10
 end
 
+def remainder(number)
+  remainder_thousands(number) if number > 1000
+  remainder_hundreds(number) if number > 100
+  remainder_tens(number) if number > 10
+end
+
+
 def roman_numerals(number)
-  thousand_numerals(number%1000) + hundred_numerals(number % 1000) + ten_numerals(number%100) + one_numerals(number%10) if number > 1000
+  if number >= 1000
+    thousand_numerals(number) + hundred_numerals(number % 1000) + ten_numerals(number%100) + one_numerals(number%10)
+  elsif number.between?(100,999)
+    hundred_numerals(number) + ten_numerals(number%100) + one_numerals(number%10)
+  elsif number.between?(10,99)
+    ten_numerals(number) + one_numerals(number%10)
+  else
+    one_numerals(numbers)
+  end
 end

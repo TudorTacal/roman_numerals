@@ -1,12 +1,6 @@
 require "roman_numerals"
 
 describe "roman numerals" do
-  it "should output a number when give a number" do
-    expect(output_number(3)).to eq 3
-  end
-  it "contains a hash containing the numerals and their values" do
-    expect(numerals_hash).to be_a(Hash)
-  end
   it "should return the thousands" do
     expect(thousands(5000)).to eq 5
   end
@@ -74,7 +68,7 @@ describe "roman numerals" do
       expect(remainder_hundreds(220)).to eq 20
     end
     it "when number is between 10..100" do
-      expect(remainder_tens(22)).to eq 2
+      expect(remainder(22)).to eq 2
     end
   end
 end

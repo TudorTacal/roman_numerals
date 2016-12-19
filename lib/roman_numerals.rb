@@ -1,2 +1,2 @@
-class roman_numerals
+class RomanNumerals
 end

@@ -18,4 +18,12 @@ describe RomanNumerals do
     expect(RomanNumerals.convert(35)).to eq("XXXV")
   end
 
+  it "should be able to convert 996 to CMXCVI" do
+    expect(RomanNumerals.convert(996)).to eq("CMXCVI")
+  end
+
+  it "should be able to convert 6787 to MMMMMMDCCLXXXVII" do
+      expect(RomanNumerals.convert(6787)).to eq("MMMMMMDCCLXXXVII")
+  end
+
 end
